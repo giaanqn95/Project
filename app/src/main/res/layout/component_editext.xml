@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/background_dialog"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/etDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_custom_edit_text"
+            android:gravity="top"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_delete_login"
+            android:tint="#000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/etDemo"
+            app:layout_constraintEnd_toEndOf="@id/etDemo"
+            app:layout_constraintTop_toTopOf="@+id/etDemo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="something view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDemo" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

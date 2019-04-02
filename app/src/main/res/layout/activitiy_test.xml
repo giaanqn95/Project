@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="man"
+            type="com.intelin.vn.demomvvm.something_view.view_models.DataModel" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/clMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={man.name}" />
+
+            <TextView
+                android:id="@+id/tvAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={man.action}"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+            <TextView
+                android:id="@+id/tvDemo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#000"
+                android:textColor="#FFFFFF"
+                app:layout_constraintTop_toBottomOf="@+id/tvAction" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDemo">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
